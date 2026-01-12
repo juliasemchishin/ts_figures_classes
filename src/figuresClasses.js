@@ -16,7 +16,7 @@ var Triangle = /** @class */ (function () {
         if (this.a + this.b <= this.c ||
             this.a + this.c <= this.b ||
             this.b + this.c <= this.a) {
-            throw new Error('Invalid triangle');
+            throw new Error('The provided sides do not form a valid triangle');
         }
     }
     Triangle.prototype.getArea = function () {
@@ -55,7 +55,7 @@ var Rectangle = /** @class */ (function () {
         }
     }
     Rectangle.prototype.getArea = function () {
-        return this.width * this.height;
+        return +(this.width * this.height).toFixed(2);
     };
     return Rectangle;
 }());

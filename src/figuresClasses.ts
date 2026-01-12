@@ -26,7 +26,7 @@ export class Triangle implements Figure {
       this.a + this.c <= this.b ||
       this.b + this.c <= this.a
     ) {
-      throw new Error('Invalid triangle');
+      throw new Error('The provided sides do not form a valid triangle');
     }
   }
 
@@ -74,7 +74,7 @@ export class Rectangle implements Figure {
   }
 
   getArea(): number {
-    return this.width * this.height;
+    return +(this.width * this.height).toFixed(2);
   }
 }
 
