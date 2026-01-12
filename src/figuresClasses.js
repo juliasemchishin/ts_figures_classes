@@ -21,7 +21,8 @@ var Triangle = /** @class */ (function () {
     }
     Triangle.prototype.getArea = function () {
         var p = (this.a + this.b + this.c) / 2;
-        return +Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c)).toFixed(2);
+        var area = Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c));
+        return Math.floor(area * 100) / 100;
     };
     return Triangle;
 }());
@@ -55,7 +56,8 @@ var Rectangle = /** @class */ (function () {
         }
     }
     Rectangle.prototype.getArea = function () {
-        return +(this.width * this.height).toFixed(2);
+        var area = this.width * this.height;
+        return Math.floor(area * 100) / 100;
     };
     return Rectangle;
 }());
